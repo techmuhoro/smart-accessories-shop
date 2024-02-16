@@ -1,0 +1,25 @@
+1. Authentication and roles
+2. Products
+    > Categories
+
+    > Brands 
+
+    > Series
+
+    > Products
+
+3. Stock and inventory management
+
+    > Uploading of prodcuts by admin
+
+    > Updating of stock by admin
+
+    > Showing out of stock
+
+4. Similar Products
+5. Likes and wish list
+6. Cart management
+7. Checkout and payement
+8. Off the counter sale
+9. Promo code
+10. Recomendation algorithm
