@@ -11,6 +11,15 @@ import { FilterIcon } from "lucide-react";
 
 export default function BrandFilter() {
     const [price, setPrice] = useState(0);
+    const [loading, setLoading] = useState(false);
+
+    const handleClick = () => {
+        setLoading(true);
+
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    };
 
     return (
         <div className="w-[20]">
@@ -80,6 +89,8 @@ export default function BrandFilter() {
                     <Button
                         variant="secondary"
                         className="w-full gap-x-1 flex justify-center items-center"
+                        loading={loading}
+                        onClick={handleClick}
                     >
                         <FilterIcon size={18} />
                         <span>Apply</span>
