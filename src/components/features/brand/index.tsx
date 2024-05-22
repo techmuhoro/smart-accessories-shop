@@ -2,6 +2,7 @@
 import { useParams } from "next/navigation";
 import * as Select from "@/components/ui/select";
 import BrandFilter from "./filter";
+import BrandProducts from "./products";
 
 export default function BrandBase() {
     const { brand } = useParams<{ brand: string }>();
@@ -25,9 +26,7 @@ export default function BrandBase() {
                     </div>
 
                     <div className="w-[75%]">
-                        <div>
-                            <p>Items</p>
-                        </div>
+                        <BrandProducts />
                     </div>
                 </div>
             </div>

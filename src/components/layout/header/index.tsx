@@ -5,7 +5,7 @@ import Navigation from "./nav/index";
 
 export default function Header() {
     return (
-        <div className="bg-primary text-primary-foreground flex px-24 py-3">
+        <div className="bg-primary text-primary-foreground flex px-24 py-3 h-[8.5vh]">
             <div className="flex items-center space-x-4">
                 <div>
                     <p className="font-bold text-2xl">Ecom</p>

@@ -1,7 +1,7 @@
 export default function Page() {
     return (
-        <div>
-            <p>James Muhoro, the best software engineer in the world!</p>
+        <div className="py-4">
+            <p className="text-center">All categories go here</p>
         </div>
     );
 }

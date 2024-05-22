@@ -28,7 +28,7 @@ export default function RootLayout({
                 )}
             >
                 <Header />
-                {children}
+                <div className="bg-slate-100 min-h-[91.5vh]">{children}</div>
             </body>
         </html>
     );
