@@ -5,6 +5,7 @@ import {
     NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 import { ArrowRightIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function CategoriesNav() {
     return (
@@ -17,12 +18,36 @@ export default function CategoriesNav() {
                     <h3 className="font-medium">Categories</h3>
 
                     <div className="space-y-2">
-                        <CategoryItem label="Smart Phones" count={2} />
-                        <CategoryItem label="Tv's" count={8} />
-                        <CategoryItem label="Laptops" count={10} />
-                        <CategoryItem label="Chargers" count={21} />
-                        <CategoryItem label="Cables" count={12} />
-                        <CategoryItem label="Headsets" count={4} />
+                        <CategoryItem
+                            label="Smart Phones"
+                            url="/category/phones"
+                            count={2}
+                        />
+                        <CategoryItem
+                            label="Tv's"
+                            url="/category/tvs"
+                            count={8}
+                        />
+                        <CategoryItem
+                            label="Laptops"
+                            url="/category/laptops"
+                            count={10}
+                        />
+                        <CategoryItem
+                            label="Chargers"
+                            url="/category/chargers"
+                            count={21}
+                        />
+                        <CategoryItem
+                            label="Cables"
+                            url="/category/cables"
+                            count={12}
+                        />
+                        <CategoryItem
+                            label="Headsets"
+                            url="/category/headsets"
+                            count={4}
+                        />
                     </div>
                 </div>
                 {/* <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -49,10 +74,18 @@ export default function CategoriesNav() {
     );
 }
 
-function CategoryItem({ count, label }: { count: number; label: string }) {
+function CategoryItem({
+    count,
+    label,
+    url,
+}: {
+    count: number;
+    label: string;
+    url: string;
+}) {
     return (
         <>
-            <div className="group flex items-center cursor-pointer">
+            <Link href={url} className="group flex items-center cursor-pointer">
                 <p className="text-muted-foreground">{label}</p>
 
                 <div className="flex ml-auto items-center gap-x-1 mr-2 group-[&:hover]:mr-0 transition-all duration-300">
@@ -64,7 +97,7 @@ function CategoryItem({ count, label }: { count: number; label: string }) {
                         className="text-muted-foreground invisible group-hover:visible"
                     />
                 </div>
-            </div>
+            </Link>
         </>
     );
 }
